@@ -35,6 +35,8 @@ Optionally set your group scope and choose variants in the config (no need to ty
 module.exports = {
   theme: {
     // ...
+    groupLevel: 10,
+    // will result in as many direct child selectors as defined here
     groupScope: "scope",
     // will result in group-scope being available in addition to the base group
     groupVariants: ["hover", "focus"],
