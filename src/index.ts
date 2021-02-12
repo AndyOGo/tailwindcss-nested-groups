@@ -1,4 +1,4 @@
-import selectorParser from 'postcss-selector-parser';
+import selectorParser, { Node } from 'postcss-selector-parser';
 import plugin from 'tailwindcss/plugin';
 
 export default plugin(({ theme, addVariant, prefix, e: escape }) => {
@@ -21,7 +21,7 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
 
             // Named groups
             node.parent.parent.insertAfter(
-              node.parent,
+              node.parent as Node,
               selectorParser().astSync(
                 `${prefix(`.group-${groupScope}:hover > .`)}${escape(`group-${groupScope}-hover${separator}${value}`)},
                 ${prefix(`.group-${groupScope}:hover :not(.group-${groupScope}) .`)}${escape(`group-${groupScope}-hover${separator}${value}`)}`
@@ -50,7 +50,7 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
 
             // Named groups
             node.parent.parent.insertAfter(
-              node.parent,
+              node.parent as Node,
               selectorParser().astSync(
                 `${prefix(`.group-${groupScope}:focus > .`)}${escape(`group-${groupScope}-focus${separator}${value}`)},
                 ${prefix(`.group-${groupScope}:focus :not(.group-${groupScope}) .`)}${escape(`group-${groupScope}-focus${separator}${value}`)}`
