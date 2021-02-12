@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.1.0...v1.1.1) (2021-02-12)
+
+
+### Bug Fixes
+
+* add group level ([5cc351e](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/5cc351e3dd0f0fd5c3b4b0aeb7376a3128ba3f2f))
+* error TS6133: 'x' is declared but its value is never read. ([948ab32](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/948ab326f89ce34cb75c2a3805db56119a9a273b))
+
 ## 1.1.0 (2021-02-12)
 
 
