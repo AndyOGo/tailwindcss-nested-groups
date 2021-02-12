@@ -13,22 +13,21 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
           // eslint-disable-next-line functional/immutable-data
           node.value = `group-hover${separator}${value}`;
 
-          node.parent.insertBefore(
-            node,
-            selectorParser().astSync(prefix(`.group:hover `))
-          );
+          if (node.parent && node.parent.parent) {
+            node.parent.insertBefore(
+              node,
+              selectorParser().astSync(prefix(`.group:hover `))
+            );
 
-          // Named groups
-          node.parent.parent.insertAfter(
-            node.parent,
-            selectorParser().astSync(
-              prefix(`.group-scope:hover > .`) +
-                escape(`group-scope-hover${separator}${value}`) +
-                ',' +
-                prefix(`.group-scope:hover :not(.group-scope) .`) +
-                escape(`group-scope-hover${separator}${value}`)
-            )
-          );
+            // Named groups
+            node.parent.parent.insertAfter(
+              node.parent,
+              selectorParser().astSync(
+                `${prefix(`.group-scope:hover > .`)}${escape(`group-scope-hover${separator}${value}`)},
+                ${prefix(`.group-scope:hover :not(.group-scope) .`)}${escape(`group-scope-hover${separator}${value}`)}`
+              )
+            );
+          }
         });
       }).processSync(selector);
     });
@@ -43,22 +42,21 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
           // eslint-disable-next-line functional/immutable-data
           node.value = `group-focus${separator}${value}`;
 
-          node.parent.insertBefore(
-            node,
-            selectorParser().astSync(prefix(`.group:focus `))
-          );
+          if (node.parent && node.parent.parent) {
+            node.parent.insertBefore(
+              node,
+              selectorParser().astSync(prefix(`.group:focus `))
+            );
 
-          // Named groups
-          node.parent.parent.insertAfter(
-            node.parent,
-            selectorParser().astSync(
-              prefix(`.group-scope:focus .`) +
-                escape(`group-scope-focus${separator}${value}`) +
-                ',' +
-                prefix(`.group-scope:focus :not(.group-scope) .`) +
-                escape(`group-scope-focus${separator}${value}`)
-            )
-          );
+            // Named groups
+            node.parent.parent.insertAfter(
+              node.parent,
+              selectorParser().astSync(
+                `${prefix(`.group-scope:focus > .`)}${escape(`group-scope-focus${separator}${value}`)},
+                ${prefix(`.group-scope:focus :not(.group-scope) .`)}${escape(`group-scope-focus${separator}${value}`)}`
+              )
+            );
+          }
         });
       }).processSync(selector);
     });
