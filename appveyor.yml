@@ -1,0 +1,24 @@
+environment:
+  matrix:
+    - nodejs_version: '10'
+    - nodejs_version: '12'
+    - nodejs_version: '14'
+
+version: '{build}'
+
+cache:
+  - node_modules -> package.json
+
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+  - node --version
+  - npm --version
+  - npm install
+
+test_script:
+  - npm test
+  - npm run cov:send
+  - npm run cov:check
+
+build: off
+deploy: off
