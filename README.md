@@ -1,6 +1,6 @@
 # tailwindcss-nested-groups
 
-Tailwind CSS plugin that adds nested groups to the `group` variant for any level deep.
+Tailwind CSS plugin that adds support nested groups to the `group` variant for any level deep by scoping them.
 
 ## Installation
 
@@ -11,6 +11,8 @@ npm install tailwindcss-named-groups --save-dev
 # yarn
 yarn add --dev tailwindcss-named-groups
 ```
+
+## Configuration
 
 Add the plugin to the `plugins` array of the tailwind config file.  
 
@@ -23,6 +25,20 @@ module.exports = {
     // ...
     require("tailwindcss-nested-groups"),
   ],
+};
+```
+
+Optionally create your scoped group in the config (no need to type group-, that will be prepended for you).
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    // ...
+    groupScope: "scope",
+    // will result in group-scope being available in addition to the base group
+  },
+  // ...
 };
 ```
 
