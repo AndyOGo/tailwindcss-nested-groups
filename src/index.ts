@@ -28,7 +28,7 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
                 selectorParser().astSync(
                   Array.from(Array(groupLevel))
                     .map(
-                      (x, index) =>
+                      (_x, index) =>
                         `${prefix(
                           `.group-${groupScope}:${groupVariant}${Array.from(
                             Array(index)
