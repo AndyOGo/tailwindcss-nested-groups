@@ -25,12 +25,16 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
               node.parent.parent.insertAfter(
                 node.parent as Node,
                 selectorParser().astSync(
-                  `${prefix(`.group-${groupScope}:${groupVariant} > .`)}${escape(
+                  `${prefix(
+                    `.group-${groupScope}:${groupVariant} > .`
+                  )}${escape(
                     `group-${groupScope}-${groupVariant}${separator}${value}`
                   )},
                   ${prefix(
                     `.group-${groupScope}:${groupVariant} :not(.group-${groupScope}) .`
-                  )}${escape(`group-${groupScope}-${groupVariant}${separator}${value}`)}`
+                  )}${escape(
+                    `group-${groupScope}-${groupVariant}${separator}${value}`
+                  )}`
                 )
               );
             }
