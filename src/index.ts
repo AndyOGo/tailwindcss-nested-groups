@@ -2,6 +2,7 @@ import selectorParser, { Node } from 'postcss-selector-parser';
 import plugin from 'tailwindcss/plugin';
 
 export default plugin(({ theme, addVariant, prefix, e: escape }) => {
+  const groupLevel = theme('groupLevel') || 10;
   const groupScope = theme('groupScope') || 'scope';
   const groupVariants = theme('groupVariants') || ['hover', 'focus'];
 
@@ -25,16 +26,20 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
               node.parent.parent.insertAfter(
                 node.parent as Node,
                 selectorParser().astSync(
-                  `${prefix(
-                    `.group-${groupScope}:${groupVariant} > .`
-                  )}${escape(
-                    `group-${groupScope}-${groupVariant}${separator}${value}`
-                  )},
-                  ${prefix(
-                    `.group-${groupScope}:${groupVariant} :not(.group-${groupScope}) .`
-                  )}${escape(
-                    `group-${groupScope}-${groupVariant}${separator}${value}`
-                  )}`
+                  Array.from(Array(groupLevel))
+                    .map(
+                      (x, index) =>
+                        `${prefix(
+                          `.group-${groupScope}:${groupVariant}${Array.from(
+                            Array(index)
+                          )
+                            .map(() => ` > :not(.group-${groupScope})`)
+                            .join('')} > .`
+                        )}${escape(
+                          `group-${groupScope}-${groupVariant}${separator}${value}`
+                        )}`
+                    )
+                    .join(',')
                 )
               );
             }
