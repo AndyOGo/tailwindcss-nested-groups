@@ -1,0 +1,23 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 1.1.0 (2021-02-12)
+
+
+### Features
+
+* added group scope option ([237cd38](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/237cd3808dd7bcfc12ae2e60bedd9da8f1dcd8a3))
+* implement nested groups plugin ([20027ef](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/20027ef3b101bb87b1a5c0f66f01d5181afccc1b))
+* make group variants configurable ([7c4ad6b](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/7c4ad6bd87b039bb8a1c7e8d04f1d994a59808f6))
+
+
+### Bug Fixes
+
+* add tailwindcss to cspell dictionary ([6c71c53](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/6c71c5371d4a581cc52428e264f0c37b6180aa22))
+* cast type of node.parent ([1e3992d](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/1e3992db4568e99d0496078164323e0ddca838e5))
+* error TS2688: Cannot find type definition file for 'node'. ([c3a239f](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/c3a239fcf2482ebbd6dfc6a6a29bbf5b3cd85568))
+* error TS7016: Could not find a declaration file for module 'tailwindcss/plugin' ([65dc9e2](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/65dc9e284a43a0d62680ea1bd25c6ddd48ca5807))
+* lint stuff ([5305197](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/5305197f31fbbe97edf7029aec29a5d7c074eb32))
+* prettier ([2dc4412](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/2dc44127efd14b563f7b4e2142c05ecbfa166968))
+* prettier ([b1c654e](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/b1c654e0a584a1dcaa3b8bc7b1846a74d71ca75e))
