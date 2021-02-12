@@ -28,7 +28,7 @@ module.exports = {
 };
 ```
 
-Optionally create your scoped group in the config (no need to type group-, that will be prepended for you).
+Optionally set your group scope and choose variants in the config (no need to type group-, that will be prepended for you).
 
 ```js
 // tailwind.config.js
@@ -37,6 +37,8 @@ module.exports = {
     // ...
     groupScope: "scope",
     // will result in group-scope being available in addition to the base group
+    groupVariants: ["hover", "focus"],
+    // will result in group-scope:hover and group-scope:focus variants
   },
   // ...
 };
@@ -58,3 +60,7 @@ Use the `.group-scope` alternative:
   </div>
 </div>
 ```
+
+## Disclaimer
+
+This Plugin relies on [CSS negation pseudo-class `:not()`](https://drafts.csswg.org/selectors-3/#negation).
