@@ -84,7 +84,8 @@
     "!**/*.json",
     "CHANGELOG.md",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "tailwindcss-nested-groups.gif"
   ],
   "ava": {
     "failFast": true,
