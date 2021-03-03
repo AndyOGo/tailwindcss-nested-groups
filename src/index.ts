@@ -1,7 +1,7 @@
 import selectorParser, { Node } from 'postcss-selector-parser';
 import plugin from 'tailwindcss/plugin';
 
-export default plugin(({ theme, addVariant, prefix, e: escape }) => {
+const nestedGroupPlugin = plugin(({ theme, addVariant, prefix, e: escape }) => {
   const groupLevel = theme('groupLevel') || 10;
   const groupScope = theme('groupScope') || 'scope';
   const groupVariants = theme('groupVariants') || ['hover', 'focus'];
@@ -49,3 +49,5 @@ export default plugin(({ theme, addVariant, prefix, e: escape }) => {
     });
   });
 });
+
+export default nestedGroupPlugin;
