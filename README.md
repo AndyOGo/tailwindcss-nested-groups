@@ -100,7 +100,7 @@ Use the `.group-scope` alternative:
 </div>
 ```
 
-Will look like or live edit [here](https://play.tailwindcss.com/2DKQEhVtqL):
+Will look like or live edit [here](https://play.tailwindcss.com/LynJHjqDNU):
 
 ![in-action](tailwindcss-nested-groups.gif)
 
