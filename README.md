@@ -6,10 +6,10 @@ Tailwind CSS plugin that adds support nested groups to the `group` variant for a
 
 ```sh
 # npm
-npm install tailwindcss-named-groups --save-dev
+npm install tailwindcss-nested-groups --save-dev
 
 # yarn
-yarn add --dev tailwindcss-named-groups
+yarn add --dev tailwindcss-nested-groups
 ```
 
 ## Configuration
