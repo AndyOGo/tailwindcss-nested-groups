@@ -55,7 +55,8 @@ Make sure that your **variants** are enabled.
 module.exports = {
   // ...
   variants: {
-    // Now you can use named groups in textColor for hover and focus
+    // Now you can use nested groups for example in backgroundColor and textColor for hover and focus
+    backgroundColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-focus'],
     textColor: ["responsive", "hover", "focus", "group-hover", "group-focus"],
   },
 };
@@ -63,7 +64,7 @@ module.exports = {
 
 ## Usage
 
-Use the `.group-scope` alternative:
+Use the `.group-scope` alternative (you can play with it [here](https://play.tailwindcss.com/LynJHjqDNU)):
 
 ```html
 <div class="space-y-6">
