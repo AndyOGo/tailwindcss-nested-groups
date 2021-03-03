@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.1.3...v1.2.0) (2021-03-03)
+
+
+### Features
+
+* added tailwinds as peer dependency ([a9d3c3f](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/a9d3c3fd9b89e4bd6d883f3d407334bb41d5aefd))
+
 ### [1.1.3](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.1.2...v1.1.3) (2021-03-03)
 
 ### [1.1.2](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.1.1...v1.1.2) (2021-02-12)
