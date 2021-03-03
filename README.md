@@ -28,7 +28,7 @@ module.exports = {
 };
 ```
 
-Optionally set your group scope and choose variants in the config (no need to type group-, that will be prepended for you).
+Optionally set your group scope and choose variants in the config (no need to type `group-`, that will be prepended for you).
 
 ```js
 // tailwind.config.js
@@ -43,6 +43,21 @@ module.exports = {
     // will result in group-scope:hover and group-scope:focus variants
   },
   // ...
+};
+```
+
+Make sure that your **variants** are enabled.
+- See **Tailwind V2** [variants](https://tailwindcss.com/docs/configuring-variants#overview) and [`group-hover`](https://tailwindcss.com/docs/hover-focus-and-other-states#group-hover)/[`group-focus`](https://tailwindcss.com/docs/hover-focus-and-other-states#group-focus)
+- See **Tailwind V1** [variants](https://v1.tailwindcss.com/docs/configuring-variants) and [`group-hover`](https://v1.tailwindcss.com/docs/pseudo-class-variants#group-hover)/[`group-focus`](https://v1.tailwindcss.com/docs/pseudo-class-variants#group-focus)
+
+```js
+// tailwind.config.js
+module.exports = {
+  // ...
+  variants: {
+    // Now you can use named groups in textColor for hover and focus
+    textColor: ["responsive", "hover", "focus", "group-hover", "group-focus"],
+  },
 };
 ```
 
