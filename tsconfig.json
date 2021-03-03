@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "es2017",
+    "target": "ES3",
     "outDir": "build/main",
     "rootDir": "src",
     "moduleResolution": "node",
@@ -40,7 +40,10 @@
     "skipLibCheck": true,
     "lib": ["es2017"],
     "types": ["node"],
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "plugins": [{
+      "transform": "ts-transform-default-export",
+    }]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules/**"],
