@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.2.0...v1.2.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* common JS default export ([5883611](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/58836119d68bcadce248177a82d7f0e1d90c6d2f))
+* target to ES3 ([1d61abf](https://github.com/AndyOGo/tailwindcss-nested-groups/commit/1d61abf0acc84466d374fb8c2146869701708543))
+
 ## [1.2.0](https://github.com/AndyOGo/tailwindcss-nested-groups/compare/v1.1.3...v1.2.0) (2021-03-03)
 
 
